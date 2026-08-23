@@ -27,11 +27,22 @@ st.set_page_config(page_title="News Pulse", page_icon="✦", layout="wide", init
 st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap');
-:root { --purple:#7446e8; --ink:#292b38; --muted:#76798c; }
+:root { --purple:#7446e8; --ink:#292b38; --muted:#76798c; color-scheme:light; }
 html, body, [class*="css"] { font-family:'Noto Sans KR','Malgun Gothic',sans-serif; }
 [data-testid="stAppViewContainer"] { background:linear-gradient(145deg,#f5f4fd 0%,#eceefa 55%,#f7f5ff 100%); color:var(--ink); }
-[data-testid="stSidebar"] { background:rgba(246,246,252,.94); border-right:1px solid rgba(116,70,232,.10); }
+[data-testid="stSidebar"] { background:#f7f6fc; border-right:1px solid rgba(116,70,232,.10); color:var(--ink); }
 [data-testid="stSidebar"] > div { padding-top:1.7rem; }
+[data-testid="stSidebar"] h1,
+[data-testid="stSidebar"] h2,
+[data-testid="stSidebar"] h3,
+[data-testid="stSidebar"] p,
+[data-testid="stSidebar"] label,
+[data-testid="stSidebar"] [data-testid="stWidgetLabel"] { color:var(--ink) !important; opacity:1 !important; }
+[data-testid="stSidebar"] textarea,
+[data-testid="stSidebar"] input { background:#fff !important; color:var(--ink) !important; -webkit-text-fill-color:var(--ink) !important; border:1px solid #e1ddee !important; caret-color:var(--purple) !important; }
+[data-testid="stSidebar"] textarea::placeholder,
+[data-testid="stSidebar"] input::placeholder { color:#9a9cad !important; -webkit-text-fill-color:#9a9cad !important; }
+[data-testid="stSidebar"] button { color:var(--ink); }
 .block-container { max-width:1440px; padding:2rem 2.4rem 4rem; }
 #MainMenu, footer { visibility:hidden; }
 [data-testid="stHeader"] { background:transparent; }
@@ -51,10 +62,11 @@ html, body, [class*="css"] { font-family:'Noto Sans KR','Malgun Gothic',sans-ser
 .report-major { margin:22px 0 9px; padding:13px 16px; border-left:5px solid var(--purple); background:linear-gradient(90deg,#f1ecff,rgba(255,255,255,.3)); border-radius:4px 14px 14px 4px; font-size:18px; font-weight:800; letter-spacing:-.02em; }
 .report-minor { margin:8px 0 4px 18px; color:#393b48; font-size:14px; font-weight:600; line-height:1.65; }
 .report-detail { margin:3px 0 7px 44px; color:#77798a; font-size:13px; line-height:1.65; }
-.sidebar-brand { font-size:22px; font-weight:800; letter-spacing:-.04em; margin-bottom:4px; }
-.sidebar-caption { color:#85889a; font-size:12px; margin-bottom:18px; }
+.sidebar-brand { color:var(--ink) !important; font-size:22px; font-weight:800; letter-spacing:-.04em; margin-bottom:4px; }
+.sidebar-caption { color:#85889a !important; font-size:12px; margin-bottom:18px; }
 div.stButton > button, div.stDownloadButton > button { border:0; border-radius:14px; min-height:48px; font-weight:800; transition:.2s ease; }
-div.stButton > button[kind="primary"], div.stDownloadButton > button[kind="primary"] { color:white; background:linear-gradient(100deg,#8d4ff0,#6442d7); box-shadow:0 10px 22px rgba(107,67,214,.24); }
+div.stButton > button[kind="primary"], div.stDownloadButton > button[kind="primary"] { color:white !important; background:linear-gradient(100deg,#8d4ff0,#6442d7) !important; box-shadow:0 10px 22px rgba(107,67,214,.24); }
+[data-testid="stSidebar"] div.stButton > button { color:white !important; background:linear-gradient(100deg,#8d4ff0,#6442d7) !important; }
 div.stButton > button:hover, div.stDownloadButton > button:hover { transform:translateY(-3px); box-shadow:0 16px 28px rgba(107,67,214,.28); border-color:#7446e8; }
 [data-testid="stExpander"] { background:rgba(255,255,255,.82); border-radius:16px; border-color:rgba(116,70,232,.12); transition:.2s ease; }
 [data-testid="stExpander"]:hover { transform:translateY(-2px); box-shadow:0 10px 22px rgba(70,55,120,.10); }
