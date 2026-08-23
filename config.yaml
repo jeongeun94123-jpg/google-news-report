@@ -1,0 +1,13 @@
+keywords:
+  - 삼성전자
+  - AI 가전
+
+exclude_words:
+  - 채용
+  - 주가
+
+lookback_hours: 24
+results_per_keyword: 30
+max_items_for_ai: 60
+model: gpt-5.6-luna
+report_focus: "시장 변화, 경쟁사 동향, 소비자 반응, 영업 기회와 리스크"
