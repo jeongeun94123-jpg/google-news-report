@@ -80,6 +80,37 @@ div.stButton > button[kind="primary"], div.stDownloadButton > button[kind="prima
 [data-testid="stSidebar"] button[data-testid="stBaseButton-primary"] { color:white !important; background:linear-gradient(105deg,#9858f4,#6542dc) !important; border:0 !important; border-radius:16px !important; min-height:52px !important; font-size:15px !important; font-weight:800 !important; letter-spacing:-.02em; box-shadow:0 10px 24px rgba(107,67,214,.25) !important; }
 [data-testid="stSidebar"] div.stButton > button p,
 [data-testid="stSidebar"] button[data-testid="stBaseButton-primary"] p { color:white !important; font-weight:800 !important; }
+
+/* Sidebar text fields: deliberately simple and neutral. */
+[data-testid="stSidebar"] [data-baseweb="textarea"],
+[data-testid="stSidebar"] [data-baseweb="textarea"] > div,
+[data-testid="stSidebar"] [data-baseweb="textarea"]:focus-within {
+  background:#fff !important;
+  border:1px solid #dfe1e7 !important;
+  border-radius:10px !important;
+  box-shadow:none !important;
+  outline:none !important;
+  transform:none !important;
+}
+[data-testid="stSidebar"] [data-baseweb="textarea"] > div {
+  border:0 !important;
+}
+[data-testid="stSidebar"] [data-baseweb="textarea"]:focus-within {
+  border-color:#8b68e8 !important;
+}
+[data-testid="stSidebar"] textarea {
+  background:#fff !important;
+  color:#30313d !important;
+  border:0 !important;
+  border-radius:10px !important;
+  box-shadow:none !important;
+  outline:none !important;
+  padding:13px 14px !important;
+  font-size:14px !important;
+  font-weight:500 !important;
+  line-height:1.5 !important;
+  resize:none !important;
+}
 div.stButton > button:hover, div.stDownloadButton > button:hover { transform:translateY(-3px); box-shadow:0 16px 28px rgba(107,67,214,.28); border-color:#7446e8; }
 [data-testid="stExpander"] { background:rgba(255,255,255,.82); border-radius:16px; border-color:rgba(116,70,232,.12); transition:.2s ease; }
 [data-testid="stExpander"]:hover { transform:translateY(-2px); box-shadow:0 10px 22px rgba(70,55,120,.10); }
