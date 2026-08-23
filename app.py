@@ -44,14 +44,15 @@ html, body, [class*="css"] { font-family:'Noto Sans KR','Malgun Gothic',sans-ser
 [data-testid="stSidebar"] input::placeholder { color:#9a9cad !important; -webkit-text-fill-color:#9a9cad !important; }
 [data-testid="stSidebar"] button { color:var(--ink); }
 [data-testid="stSidebar"] [data-testid="stWidgetLabel"] p { font-size:14px !important; font-weight:700 !important; letter-spacing:-.02em; margin-bottom:6px !important; }
-[data-testid="stSidebar"] [data-baseweb="textarea"] { border:0 !important; border-radius:16px !important; overflow:hidden; background:#fff !important; box-shadow:0 5px 16px rgba(66,50,112,.07); transition:box-shadow .2s ease, transform .2s ease; }
+[data-testid="stSidebar"] [data-baseweb="textarea"] { border:1px solid #e6e2f0 !important; outline:0 !important; border-radius:14px !important; overflow:hidden; background:#fff !important; box-shadow:0 4px 14px rgba(66,50,112,.06) !important; transition:box-shadow .2s ease, border-color .2s ease; }
+[data-testid="stSidebar"] [data-baseweb="textarea"] > div { border:0 !important; outline:0 !important; background:#fff !important; box-shadow:none !important; }
 [data-testid="stSidebar"] [data-baseweb="textarea"]:focus-within { transform:translateY(-1px); box-shadow:0 0 0 3px rgba(116,70,232,.14),0 10px 24px rgba(66,50,112,.11); }
-[data-testid="stSidebar"] textarea { border:0 !important; border-radius:16px !important; padding:15px 16px !important; font-size:14px !important; font-weight:600 !important; line-height:1.55 !important; }
+[data-testid="stSidebar"] textarea { border:0 !important; outline:0 !important; border-radius:14px !important; padding:14px 15px !important; font-size:14px !important; font-weight:600 !important; line-height:1.55 !important; box-shadow:none !important; resize:none !important; }
 [data-testid="stSidebar"] [data-testid="stNumberInput"] [data-baseweb="input"] { border:1px solid #e1ddee !important; border-radius:16px !important; overflow:hidden; background:#fff !important; box-shadow:0 5px 16px rgba(66,50,112,.07); min-height:50px; }
 [data-testid="stSidebar"] [data-testid="stNumberInput"] input { border:0 !important; padding-left:16px !important; font-size:15px !important; font-weight:700 !important; }
-[data-testid="stSidebar"] [data-testid="stNumberInput"] button { width:39px !important; height:38px !important; min-width:39px !important; margin:5px 5px 5px 0 !important; padding:0 !important; border:0 !important; border-radius:12px !important; background:#eee9ff !important; color:var(--purple) !important; box-shadow:none !important; transition:transform .18s ease, background .18s ease, color .18s ease !important; }
-[data-testid="stSidebar"] [data-testid="stNumberInput"] button:hover { transform:scale(1.08); background:var(--purple) !important; color:#fff !important; }
-[data-testid="stSidebar"] [data-testid="stNumberInput"] button svg { fill:currentColor !important; stroke:currentColor !important; width:17px !important; height:17px !important; }
+[data-testid="stSidebar"] [data-testid="stNumberInput"] [data-baseweb="input"] button { width:34px !important; height:34px !important; min-width:34px !important; margin:7px 5px 7px 0 !important; padding:0 !important; border:0 !important; border-radius:10px !important; background:#f0ecff !important; color:var(--purple) !important; box-shadow:none !important; transition:background .18s ease, color .18s ease !important; }
+[data-testid="stSidebar"] [data-testid="stNumberInput"] [data-baseweb="input"] button:hover { background:var(--purple) !important; color:#fff !important; }
+[data-testid="stSidebar"] [data-testid="stNumberInput"] [data-baseweb="input"] button svg { fill:currentColor !important; stroke:currentColor !important; width:14px !important; height:14px !important; }
 .block-container { max-width:1440px; padding:2rem 2.4rem 4rem; }
 #MainMenu, footer { visibility:hidden; }
 [data-testid="stHeader"] { background:transparent; }
@@ -77,6 +78,8 @@ div.stButton > button, div.stDownloadButton > button { border:0; border-radius:1
 div.stButton > button[kind="primary"], div.stDownloadButton > button[kind="primary"] { color:white !important; background:linear-gradient(100deg,#8d4ff0,#6442d7) !important; box-shadow:0 10px 22px rgba(107,67,214,.24); }
 [data-testid="stSidebar"] div.stButton > button,
 [data-testid="stSidebar"] button[data-testid="stBaseButton-primary"] { color:white !important; background:linear-gradient(105deg,#9858f4,#6542dc) !important; border:0 !important; border-radius:16px !important; min-height:52px !important; font-size:15px !important; font-weight:800 !important; letter-spacing:-.02em; box-shadow:0 10px 24px rgba(107,67,214,.25) !important; }
+[data-testid="stSidebar"] div.stButton > button p,
+[data-testid="stSidebar"] button[data-testid="stBaseButton-primary"] p { color:white !important; font-weight:800 !important; }
 div.stButton > button:hover, div.stDownloadButton > button:hover { transform:translateY(-3px); box-shadow:0 16px 28px rgba(107,67,214,.28); border-color:#7446e8; }
 [data-testid="stExpander"] { background:rgba(255,255,255,.82); border-radius:16px; border-color:rgba(116,70,232,.12); transition:.2s ease; }
 [data-testid="stExpander"]:hover { transform:translateY(-2px); box-shadow:0 10px 22px rgba(70,55,120,.10); }
